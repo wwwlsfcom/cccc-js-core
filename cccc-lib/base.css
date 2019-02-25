@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    /*overflow: auto; !*避免出现滚动条*!*/
+    font-size: 12px; /* larger, smaller */
+    color: white;
+}
+html, body{
+    height: 100%;
+}
+html, body{
+    overflow: visible;
+}
