@@ -1,0 +1,312 @@
+.font-larger {
+    font-size: 18px !important;
+}
+
+.font-large {
+    font-size: 16px !important;
+}
+
+.font-normal {
+    font-size: 14px !important;
+}
+
+.font-small {
+    font-size: 13px !important;
+}
+
+.font-smaller {
+    font-size: 12px !important; /* 这是chrome能支持的最小字体*/
+}
+
+/*
+实现文本两端对齐
+*/
+.text-justify {
+    text-align: justify;
+    text-justify: inter-ideograph; /* IE 浏览器必须加这个 */
+    line-height: 1rem;
+    height: 1rem;
+    overflow: hidden;
+}
+
+.text-justify:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+
+/*
+按钮样式
+ */
+.cccc-btn-default {
+    display: inline-block;
+    border: 1px solid grey;
+    color: white;
+    background-color: grey;
+    line-height: 2em;
+    height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 1em;
+    text-underline-style: none;
+}
+
+.cccc-btn-yellow {
+    display: inline-block;
+    width: 8em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+    background-color: #f9bf11;
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    border-radius: 4em;
+}
+
+.cccc-btn-yellow:hover {
+    color: white;
+}
+
+.enable-resizable {
+    padding: 0;
+    position: absolute;
+    border-left: 3px solid #cccccc;
+    border-top: 3px solid #cccccc;
+    box-sizing: content-box !important;
+}
+
+.enable-resizable .right-side {
+    position: absolute;
+    right: -3px;
+    width: 3px;
+    bottom: 0px;
+    top: -3px;
+    background-color: #cccccc;
+    cursor: ew-resize;
+}
+
+.enable-resizable .bottom-side {
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+    right: 0px;
+    height: 3px;
+    background-color: #cccccc;
+    cursor: ns-resize;
+
+}
+
+.enable-resizable .thumb {
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 11px;
+    height: 10px;
+    background-color: #cccccc;
+    /*background-image: url("resize_thumb.png");*/
+    background-size: contain;
+    background-position: 1px 1px;
+    cursor: se-resize;
+    background-repeat: no-repeat;
+    border: 1px solid #cccccc;
+    border-top-left-radius: 10px;
+}
+
+.cccc-dialog {
+    position: absolute;
+}
+
+.cccc-dialog .title-bar {
+    display: flex;
+    align-items: center;
+    background-color: #007dcd;
+    height: 2em;
+}
+
+.cccc-dialog .title-bar .caption {
+    flex: 1 0 auto;
+    color: white;
+    padding-left: 1em;
+    font-size: x-small;
+    color: #f9bf11;
+}
+
+.cccc-dialog .title-bar .caption:hover {
+    cursor: move;
+}
+
+.cccc-dialog .title-bar .close {
+    background-image: url("close.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cccc-dialog .title-bar .close {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    flex: none;
+    border: 1px solid #4db3ff00;
+    margin-right: .5em;
+}
+
+.cccc-dialog .title-bar .close:hover {
+    border: 1px solid #4db3ff;
+}
+
+.left-arrow {
+    display: block;
+    position: absolute;
+    border-right: 20px solid #cccccc;
+    border-left-width: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.cccc-input-box{
+    background-color: white;
+    border: 0px solid white;
+    outline: 0;
+    padding: .5em;
+    min-width: 5em;
+}
+
+
+/*滚动条样式*/
+.cccc-scrollbar::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+.cccc-scrollbar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 159, 255,0.2);
+    background: rgba(0, 159, 255,0.2);
+}
+.cccc-scrollbar::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.cccc-menu{
+    display: block;
+    padding: 0;
+}
+.cccc-menu > .cccc-menu-item{
+    display: inline-block;
+    height: 3em;
+    min-width: 3em;
+    padding: .5em;
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+    background-position: center top;
+    background-size: auto 2em;
+    background-repeat: no-repeat;
+    /*margin: .5em;*/
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 2px;
+    font-size: 12px;
+}
+.cccc-menu > .cccc-menu-item:hover{
+    background-color: #0f98d1;
+}
+.cccc-menu > .cccc-menu-item:active{
+    opacity: .7;
+}
+
+
+
+.toggle-button-group {
+    flex: 0 1 auto;
+    border: 1px solid rgba(0, 159, 255, 0);
+    border-radius: .5em;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    line-height: 2em;
+}
+
+.toggle-button-group > .toggle-button-default, .toggle-button-group .toggle-button-checked {
+    flex: 1 1 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.toggle-button-group > .toggle-button-checked:first-child, .toggle-button-group > .toggle-button-default:first-child {
+    border-bottom-left-radius: .5em;
+    border-top-left-radius: .5em;
+}
+
+.toggle-button-group > .toggle-button-checked:last-child, .toggle-button-group > .toggle-button-default:last-child {
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.toggle-button-group > .toggle-button-default {
+    color: rgb(0, 159, 255);
+    border: 1px solid rgb(0, 159, 255);
+}
+
+.toggle-button-group > .toggle-button-checked {
+    background-color: rgb(0, 159, 255);
+    color: white;
+}
+
+.toggle-button-group > .toggle-button-default:hover, .toggle-button-group > .toggle-button-checked:hover {
+    color: orange;
+}
+
+.toggle-button-group > .toggle-button-default:active, .toggle-button-group > .toggle-button-checked:active {
+    opacity: .7;
+}
+
+input[type='checkbox'].cccc-checkbox{
+    width: 1em;
+    height: 1.5em;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border-width: 0px;
+    outline: none;
+    background-image: url("unchecked_checkbox_26px_easyicon.net.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .5;
+}
+
+input[type='checkbox'].cccc-checkbox:checked {
+    background-image: url("checked_checkbox_26px_easyicon.net.png");
+}
+
+button.cccc-button-default{
+    background-color: transparent;
+    border-width: 0;
+    background-image: url("button_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 92px;
+    height: 29px;
+    line-height: 29px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    outline: 0;
+}
+
+button.cccc-button-default:hover{
+    color: orange;
+}
+
+button.cccc-button-default:active{
+    opacity: .7;
+}
